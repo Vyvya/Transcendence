@@ -1,0 +1,299 @@
+/* :root {
+  --main-background-color: #d62323; Define a CSS variable for background color
+  --primary-text-color: #646cff; Define a CSS variable for text color
+}
+
+body {
+  background-color: var(--main-background-color);  Use the CSS variable for background color
+  color: var(--primary-text-color);  Use the CSS variable for text color
+}
+*/
+
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  background-color: #d62323;
+  color-scheme: light dark;
+  color: rgba(10, 0, 0, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+#canvas1 {
+	border: 2px solid rgb(0, 0, 0);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/* width: 1000px;
+	height: 576px; */
+
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Puts the canvas behind your content */
+  pointer-events: none; /* This line makes the canvas ignore mouse events */
+  /*z-index: -1; Puts the canvas behind your content */
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+
+/*
+.custom-navbar {
+  background-color: rgb(239, 124, 9); /* Replace with your desired color */
+  /* text-align: center;
+} */
+
+h1 {
+  color: rgb(244, 237, 237);
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid rgb(78, 74, 74);
+  /* padding: 0.6em 1.2em; */
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  /* cursor: pointer; */
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #c3c4d2;
+}
+
+.button-primary {
+  color: #faf6f6; /* Text color for the button */
+}
+
+/* .button-primary:hover {
+  background-color: #000000; /* Change the color on hover */
+/* }
+
+.button-secondary {
+  background-color: #000000; /* Replace with your desired color */
+  /*color: #ffffff; /* Text color for the button
+}
+
+.button-secondary:hover {
+  background-color: #00eeff; /* Change the color on hover
+} */
+
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#pong-canvas {
+  width: 800px;
+  /* ou toute autre taille appropriée */
+  height: 600px;
+  border: 1px solid black;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #342525;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.user-container {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-container img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.user-container button {
+  margin-left: 10px;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: flex-center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  min-height: 100vh; /* Ensure container takes up at least the full viewport height */
+  margin-top: 10px;
+}
+
+
+#login-section {
+  height: 100px; /* Adjust the height as needed */
+}
+/* Custom styles for the login form */
+.form-label {
+  text-align: center;
+  color: #FF5733; /* Label text color */
+  font-size: 16px;
+}
+/* Customize the label styles */
+#loginForm label {
+  color: #ffffff; /* Label text color */
+  font-size: 16px; /* Label font size */
+
+}
+
+/* Customize the input field styles */
+#login-username,
+#login-password {
+  background-color: #000000; /* Input background color */
+  border: 1px solid #7b7979; /* Input border color */
+  color: #333; /* Input text color */
+  border-radius: 10px; /* Input border radius */
+  padding: 8px; /* Input padding */
+}
+
+/* Change the input field border color on focus */
+#login-username:focus,
+#login-password:focus {
+  border-color: #ffffff; /* Change the border color on focus */
+}
+
+/* Customize the submit button styles */
+#loginForm button[type="submit"] {
+  margin-top: 30px;
+  background-color: #000000; /* Button background color */
+  color: #ffffff; /* Button text color */
+  border: 1px solid #7b7979; /* Input border color */
+  border-radius: 10px; /* Button border radius */
+  padding: 12px 20px; /* Button padding */
+  font-weight: bold; /* Button font weight */
+  text-align: center;
+}
+
+/* Change button background color on hover */
+#loginForm button[type="submit"]:hover {
+  margin-top: 30px;
+  background-color: #4f4d4d; /* Change the background color on hover */
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Optional: Add some spacing between menu items */
+.nav-item {
+  margin: 0 15px;
+}
+
+position-values: (
+  0: 0,
+  50: 50%,
+  75: 75%,
+  100: 100%
+);
